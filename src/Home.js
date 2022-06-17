@@ -8,14 +8,14 @@ import { useContext } from 'react'
 import './Home.css'
 
 function Home() {
-  function AuthLink() {
-    let { name, signIn, signOut } = useContext(UserContext)
+  let { name, signIn, signOut } = useContext(UserContext)
+  function authLink() {
 
     if (name) {
       return (
         <span className="container">
           Signed in as: {name}
-          <Link to="/" className="nav-link" onClick={signOut}>
+          <Link to="/" className="link" onClick={signOut}>
             Sign Out
           </Link>
         </span>
@@ -37,7 +37,7 @@ function Home() {
               Home
             </Link>
           </Nav>
-          <Navbar.Text>{AuthLink()}</Navbar.Text>
+          <Navbar.Text>{authLink()}</Navbar.Text>
         </Container>
       </Navbar>
       <Stack gap={3} className="col-md-10 mx-auto">

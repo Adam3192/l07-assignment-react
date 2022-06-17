@@ -1,4 +1,10 @@
-#container {
- display: flex;
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+ color: blue !important;
+ padding-left: 20px;
 }
 
